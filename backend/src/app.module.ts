@@ -8,10 +8,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'password', // поменяй на свой пароль
+      password: 'password', 
       database: 'library_db',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true, // ВНИМАНИЕ: только для разработки!
+      synchronize: true, !
     }),
   ],
 })
