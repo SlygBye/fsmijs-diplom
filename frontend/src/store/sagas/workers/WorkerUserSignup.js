@@ -1,8 +1,7 @@
 import { put, retry } from "redux-saga/effects";
 import {
   actUserError,
-  actUserSignup,
-  actionUserTest,
+  actUserSignup
 } from "../../actions/actionCreators";
 import { userSignup } from "../../api/users/userSignup";
 

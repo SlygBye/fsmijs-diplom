@@ -9,9 +9,6 @@ import { mgrRegRoomsSearchList } from "../../api/regrooms/mgrRegroomsSearchList"
 export default function* WorkerMgrRegRoomsList(action) {
   console.log("SAGA WORKER WorkerMgrRegRoomsList", action.payload);
   if (typeof action.payload !== "string") {
-    console.log(
-      "NONONO ============== Прерываем WORKER WorkerMgrRegRoomsList по строке",
-    );
     return;
   }
   try {
@@ -26,7 +23,6 @@ export default function* WorkerMgrRegRoomsList(action) {
     console.log("Worker WorkerMgrRegRoomsList 222", data);
     yield put(actMgrRegRoomsList(data));
   } catch (err) {
-    // alert('Ошибка запроса RegRooms List');
     yield put(actionUserTest(err.massage));
   }
 }

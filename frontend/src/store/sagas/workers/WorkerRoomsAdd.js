@@ -15,7 +15,6 @@ export default function* WorkerRoomsAdd(action) {
   } catch (err) {
     console.log("Ошибка запроса ROOMS ADD", err);
     if (err.massage) {
-      alert("Ошибка запроса ROOMS-ADD");
       yield put(actionUserTest(err.massage));
     }
   }

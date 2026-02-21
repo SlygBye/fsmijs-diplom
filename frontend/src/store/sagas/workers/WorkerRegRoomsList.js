@@ -3,9 +3,7 @@ import { actRegRoomsList, actionUserTest } from "../../actions/actionCreators";
 import { regRoomsSearchList } from "../../api/regrooms/regroomsSearchList";
 
 export default function* WorkerRegRoomsList(action) {
-  // console.log('SAGA WORKER RegRoomsList', action.payload);
   if (typeof action.payload !== "string") {
-    // console.log('NONONO ============== Прерываем WORKER REGRoomsList');
     return;
   }
   try {
@@ -17,10 +15,8 @@ export default function* WorkerRegRoomsList(action) {
       regRoomsSearchList,
       action.payload,
     );
-    // console.log('Worker HotelLIST 222', data);
     yield put(actRegRoomsList(data));
   } catch (err) {
-    // alert('Ошибка запроса RegRooms List');
     yield put(actionUserTest(err.massage));
   }
 }

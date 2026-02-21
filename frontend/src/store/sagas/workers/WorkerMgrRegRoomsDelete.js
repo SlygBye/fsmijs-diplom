@@ -1,10 +1,8 @@
 import { put, retry } from "redux-saga/effects";
 import {
   actMgrRegRoomsDelete,
-  actRoomsDelete,
-  actionUserTest,
+  actRoomsDelete
 } from "../../actions/actionCreators";
-import { regRoomsDelete } from "../../api/regrooms/regroomsDelete";
 import { mgrRegRoomsDelete } from "../../api/regrooms/mgrRegroomsDelete";
 
 export default function* WorkerMgrRegRoomsDelete(action) {

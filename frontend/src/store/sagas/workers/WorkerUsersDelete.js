@@ -1,8 +1,7 @@
 import { put, retry } from "redux-saga/effects";
 import {
   actUsersDelete,
-  actUsersList,
-  actionUserTest,
+  actUsersList
 } from "../../actions/actionCreators";
 import { usersDelete } from "../../api/users/usersDelete";
 
@@ -18,9 +17,7 @@ export default function* WorkerUsersDelete(action) {
     );
     yield put(actUsersDelete(data._id));
   } catch (err) {
-    // console.log('Ошибка запроса DELETE', err );
     if (err.massage) {
-      alert("Ошибка запроса DELETE");
       yield put(actionUserTest(err.massage));
     }
   }

@@ -17,7 +17,6 @@ export default function* WorkerUsersUpdate(action) {
     );
     yield put(actUsersUpdate(data));
   } catch (err) {
-    alert("Ошибка UPDATE USERS");
     yield put(actionUserTest(err.massage));
   }
 }

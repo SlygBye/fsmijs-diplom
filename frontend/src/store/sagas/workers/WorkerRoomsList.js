@@ -3,12 +3,9 @@ import { actRoomsList, actionUserTest } from "../../actions/actionCreators";
 import { roomsListSearch } from "../../api/hotels/roomsListSearch";
 
 export default function* WorkerRoomsList(action) {
-  // console.log('SAGA WORKER ROOMS List', action);
-  if (!action.payload.limit) {
-    // console.log('ROOMS worker NONONO');
+  if (!action.payload.limit) {;
     return;
   }
-  // console.log('YESYESYES');
   try {
     const retryCount = 0;
     const retryDelay = 0 * 1000;
