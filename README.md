@@ -937,3 +937,31 @@ POSTGRES_DB=
 ```
 
 Для запуска приложения должен использоваться скрипт `npm start`, описанный в `package.json`.
+
+### Запуск проекта:
+
+Выполнить команду:
+
+```
+docker-compose up -d
+
+```
+
+После выполнения доступны:
+
+     localhost:5173 - frontend
+
+     localhost:3000 - backend
+
+     localhost:27017 - mongodb
+
+Реализация и доступы:
+    По умолчанию реализованы доступы:
+    
+    Admin - role: 'admin' - login: admin@mail.ru; password: admin@mail.ru;
+
+    Manager - role: 'manager' - login: manager@mail.ru; password: manager@mail.ru;
+
+    Client - role: 'client' - login: client@mail.ru; password: client@mail.ru;
+
+    По умолчанию добавлены гостиницы и номера.
