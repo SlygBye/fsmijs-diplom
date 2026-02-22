@@ -25,7 +25,7 @@ export class Room {
   public updatedAt: Date;
 
   @Prop({ required: true })
-  public isAnable: boolean;
+  public isEnable: boolean;
 }
 
 export const RoomSchema = SchemaFactory.createForClass(Room);

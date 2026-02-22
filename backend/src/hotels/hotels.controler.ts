@@ -12,10 +12,10 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { HotelsService } from './hotels.service';
-import { ICreateHotelDto } from './interfaces/dto/create-hotel';
-import { IUpdateHotelDto } from './interfaces/dto/update-hotel';
+import { ICreateHotelDto } from './interfaces/dto/create-hotel.dto';
+import { IUpdateHotelDto } from './interfaces/dto/update-hotel.dto';
 import { FilesInterceptor } from '@nestjs/platform-express';
-import { INewHotelBodyDto } from './interfaces/dto/new-hotel-body';
+import { INewHotelBodyDto } from './interfaces/dto/new-hotel-body.dto';
 import { HotelDocument } from './schemas/hotels.schema';
 import { JwtAuthAdminGuard } from 'src/auth/jwt-auth.admin.guard';
 import { IParamId } from './interfaces/dto/param-id';

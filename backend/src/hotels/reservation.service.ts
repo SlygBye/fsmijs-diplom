@@ -5,7 +5,7 @@ import {
   Reservation,
   ReservationDocument,
 } from './schemas/reservations.schema';
-import { ICreateReservationDto } from './interfaces/dto/create-reservation';
+import { ICreateReservationDto } from './interfaces/dto/create-reservation.dto';
 
 @Injectable()
 export class ReservationService {

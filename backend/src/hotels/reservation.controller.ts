@@ -9,7 +9,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { ReservationService } from './reservation.service';
-import { ICreateReservationDto } from './interfaces/dto/create-reservation';
+import { ICreateReservationDto } from './interfaces/dto/create-reservation.dto';
 import { JwtAuthClientGuard  } from 'src/auth/jwt-auth.client.guard';
 import { JwtAuthManagerGuard  } from 'src/auth/jwt-auth.manager.guard';
 

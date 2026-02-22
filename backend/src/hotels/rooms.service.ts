@@ -5,9 +5,9 @@ import { access, mkdir, writeFile } from 'fs/promises';
 import { join } from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import { Room, RoomDocument } from './schemas/rooms.schema';
-import { INewRoomBodyDto } from './interfaces/dto/new-room-body';
+import { INewRoomBodyDto } from './interfaces/dto/new-room-body.dto';
 import { HotelsService } from './hotels.service';
-import { IUpdateRoomBodyDto } from './interfaces/dto/update-room';
+import { IUpdateRoomBodyDto } from './interfaces/dto/update-room.dto';
 
 @Injectable()
 export class RoomsService {
@@ -72,8 +72,8 @@ export class RoomsService {
       description: body.description,
       createdAt: new Date(),
       updatedAt: new Date(),
-      isAnable: body.isAnable,
-      images: JSON.stringify(resWriteFIles),
+      isAnable: body.isEnable,
+      images: JSON.stringify(resWriteFIles)
     };
     const room = this.RoomModel.create(newHotel);
     return room;

@@ -13,9 +13,9 @@ import {
 import { RoomsService } from './rooms.service';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { RoomDocument } from './schemas/rooms.schema';
-import { INewRoomBodyDto } from './interfaces/dto/new-room-body';
+import { INewRoomBodyDto } from './interfaces/dto/new-room-body.dto';
 import { JwtAuthAdminGuard  } from 'src/auth/jwt-auth.admin.guard';
-import { IUpdateRoomBodyDto } from './interfaces/dto/update-room';
+import { IUpdateRoomBodyDto } from './interfaces/dto/update-room.dto';
 import { IParamId } from './interfaces/dto/param-id';
 
 @Controller('api')
