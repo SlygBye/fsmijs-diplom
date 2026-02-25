@@ -1,6 +1,6 @@
 import viewIcon from "../../img/eye.png";
 import editIcon from "../../img/pen.png";
-import deleteIcon from "../../img/remove.png";
+import deleteIcon from "../../img/remove.jpeg";
 import reservIcon from "../../img/reservation.png";
 import { useSelector } from "react-redux";
 

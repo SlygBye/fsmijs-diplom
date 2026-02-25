@@ -1,8 +1,8 @@
 services:
   mongodb:
-    image: mongo:mongodb/mongodb-community-server
+    image: mongo:6.0
     ports:
-      - '27017:27017'
+      - 27017:27017
     volumes:
       - mongo_volume:/mongo_volume
       - ./database/docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
@@ -18,18 +18,15 @@ services:
     env_file:
       - ./.env.backend
     ports:
-      - 3000:3000
+      - 4000:4000
   frontend:
     build: ./frontend
     depends_on:
       - backend
-    volumes:
-      - ./frontend:/frontend
     env_file:
       - ./.env.frontend
     ports:
       - 5173:5173
 volumes:
-  frontend:
   backend:
   mongo_volume:

@@ -2,14 +2,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  actHotelsPics,
-  actRoomsPics,
+  actRoomsImages
 } from "../../store/actions/actionCreators.js";
-import { hotelsUpdate } from "../../store/api/hotels/hotelsUpdate.js";
 import { roomsByIdSearch } from "../../store/api/hotels/roomsByIdSearch.js";
 import AddRoomPics from "./AddRoomPics.jsx";
 import { roomsUpdate } from "../../store/api/hotels/roomsUpdate.js";
-// import { regRoomsSearchList } from "../../store/api/regrooms/regroomsSearchList.js";
 
 export default function EditRoom() {
   const { id } = useParams();
@@ -37,7 +34,7 @@ export default function EditRoom() {
         arrTemp.push(file);
         if (arrPicsFromBack.length === arrTemp.length) {
           console.log("123123123-123", arrTemp);
-          dispatch(actRoomsPics(arrTemp));
+          dispatch(actRoomsImages(arrTemp));
         }
       });
     };
@@ -82,7 +79,7 @@ export default function EditRoom() {
   }
 
   function clearAll() {
-    dispatch(actRoomsPics([]));
+    dispatch(actRoomsImages([]));
     setTitle("");
     setDescription("");
   }

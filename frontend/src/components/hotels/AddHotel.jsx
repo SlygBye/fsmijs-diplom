@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import AddHotelPics from "./AddHotelPics";
 import {
   actHotelsAdd,
-  actHotelsPics,
+  actHotelsImages,
 } from "../../store/actions/actionCreators";
 
 export default function AddHotel() {
@@ -57,7 +57,7 @@ export default function AddHotel() {
 
  
   function clearAll() {
-    dispatch(actHotelsPics([]));
+    dispatch(actHotelsImages([]));
     setTitle("");
     setDescription("");
   }

@@ -1,7 +1,7 @@
 import {
   ROOMS_LIST,
   ROOMS_DELETE,
-  ROOMS_PICS,
+  ROOMS_IMAGES,
   ROOMS_ADD,
 } from "../actions/actionTypes";
 
@@ -35,7 +35,7 @@ export default function reducerRooms(state = initialState, action) {
         loading: false,
         error: null,
       };
-    case ROOMS_PICS:
+    case ROOMS_IMAGES:
       return {
         ...state,
         roomsPics: action.payload,

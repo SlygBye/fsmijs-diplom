@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import AddRoomPics from "./AddRoomPics";
-import { actRoomsAdd, actRoomsPics } from "../../store/actions/actionCreators";
+import AddRoomPics from "./AddRoomImages";
+import { actRoomsAdd, actRoomsImages, actRoomsPics } from "../../store/actions/actionCreators";
 
 export default function AddRoom({ setIsAddRoom, hotelId }) {
   const { user } = useSelector((state) => state.crUser);
@@ -51,7 +51,7 @@ export default function AddRoom({ setIsAddRoom, hotelId }) {
   }
 
   function clearAll() {
-    dispatch(actRoomsPics([]));
+    dispatch(actRoomsImages([]));
     setTitle("");
     setDescription("");
     const timeoutId = setTimeout(setIsAddRoom(false), 200);

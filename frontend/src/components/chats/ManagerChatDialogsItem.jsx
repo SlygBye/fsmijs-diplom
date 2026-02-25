@@ -1,5 +1,5 @@
-import chMark from "../../img/check-mark.png";
-import dChMark from "../../img/double-check-mark.png";
+import chMark from "../../img/check-mark.jpg";
+import dChMark from "../../img/double-check-mark.jpg";
 
 export default function ManagerChatDialogItem({ item, chatOwner }) {
   const checkRead = item.readAt ? dChMark : chMark;
